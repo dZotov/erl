@@ -1,0 +1,303 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"func",
+				"function_exists"
+			],
+			[
+				"playerS",
+				"showPlayerForTablets"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"pla",
+				"player"
+			],
+			[
+				"un",
+				"unlink"
+			],
+			[
+				"filesiz",
+				"filesize"
+			],
+			[
+				"th",
+				"thumbs_path"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"s",
+				"scandir"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "test.erl",
+			"settings":
+			{
+				"buffer_size": 214,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 67.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/zona/Documents/cred.txt",
+		"/Users/zona/Documents/!!!!.txt",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/5E65E166-A27C-4D79-BC30-FD1BB5FC0D92/1355920292.txt",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/1E705F17-4448-43F4-972B-0132AD4388FE/1356080427.txt",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/B4E0C5D0-024D-4630-9B1C-ED43DF2CA1CD/1355910523.txt",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/17513DE5-51A0-46D4-82D2-01CFFD8FC038/1355910523.txt",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/37AAD460-33EC-4D93-A3B8-CBB0E88A62BF/1355148690.txt",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/EB0C1180-1C62-41E1-870C-FA1679B80449/wp-config.php",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/D160A6AF-A8EF-41A1-8F96-FC69A976FDF4/index.html",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/7CF42039-721C-4600-830C-00175E539F92/index.html",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/858E6D47-3DC8-432E-94EF-BB9A7CA675E6/modifier.replace.php",
+		"/Users/zona/Downloads/server-test.php",
+		"/Users/zona/Docs/cred.txt",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/29545614-4B3B-4B76-80A6-C4F410564843/convert.php",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/FD5B99BB-5CAE-4915-8E61-DF50B3FD1599/index.html",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/7CA89F7A-101A-4744-AB70-8425DE20C8CE/menu_contents.tpl",
+		"/Users/zona/projects/javbucks/player/index.html",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/DCF6ACA8-22E6-42E1-AD49-2BC34F02A90F/yarpp-template-thumbnail.php",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/90E05C39-8829-481A-9EEE-792CB64713CA/1.php",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/019ABEAA-7AC1-4CE1-857E-F338F8671362/single.php",
+		"/Users/zona/Downloads/qqq/swfobject/src/swfobject.js",
+		"/Users/zona/projects/my/JPchicks.com/admin/exec_grab.php",
+		"/Users/zona/projects/my/JPchicks.com/admin/bg_import.php",
+		"/Users/zona/projects/my/JPchicks.com/admin/import.php",
+		"/Users/zona/projects/my/JPchicks.com/admin/include/utils.php",
+		"/Users/zona/projects/my/JPchicks.com/admin/cron/gallery_info.php",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/E82C8B2F-A557-4D08-8B9F-EFB9BA9E0DCE/index.html",
+		"/Users/zona/Downloads/qqq/swfobject/swfobject.js",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/5E4CE878-440C-4C43-82B2-2F3E5914B58F/class-wp-xmlrpc-server.php",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/C19CFC63-CE7E-45F1-9127-523E270F332A/xmlrpc.php",
+		"/Users/zona/Dropbox/Public/wm.txt",
+		"/Users/zona/projects/javbucks/javhd/src/App/BaseBundle/Resources/config/routing.yml",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/ADB2002D-E753-4F17-BF38-BB8D7B8BD806/optimize.php",
+		"/Users/zona/projects/javbucks/javhd/src/App/ReviewBundle/Resources/config/routing.yml",
+		"/Users/zona/Downloads/log-slow-queries.log",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/B5AA1823-2877-45CE-9A3B-A661888B5AB7/optimize.php",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/1DC8A9E6-6C44-4A9D-B492-650FBE3E35EE/screens_zip.php",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/BCA2CE64-6541-43F2-B75E-6CB8D32ABF57/optimize.php",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/EBD76A8D-2EEA-4454-ADA9-4155C8B16B81/app.php",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/D578B988-7578-4DFB-9AEC-99B260A4CAA3/sidebar.php",
+		"/Users/zona/Dropbox/Public/OC-TZ.txt",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/D1BFC715-038A-4325-8F7D-551CB661DA63/page.php",
+		"/Users/zona/Downloads/vercury/readme.txt",
+		"/Users/zona/Downloads/vercury/bin/create_vignatures.pl",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/39B22BB9-C9EF-4197-85B8-35C1B8BC3E38/1354695901.txt",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/D42162DB-585B-4AFD-AB9E-66934F2F6E66/1354695901.txt",
+		"/Users/zona/projects/i.php",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/F6D2DDC8-9D72-4426-A3DD-B15FF4138E04/config.php",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/98B65D93-77E0-4A72-87CF-A107120911CE/test.php",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/E1C92AB9-3659-43D7-88E6-12CA3436E9BA/wp-config.php",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/3A648B86-AE1B-4ED4-B2EB-8BCEED0608B6/wp-config.php",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/C318D0EF-CB05-4EC1-8B7E-A121790010DD/advanced-cache.php",
+		"/Users/zona/Downloads/WirelessSample/Form1.cs",
+		"/Users/zona/Downloads/WirelessSample/Program.cs",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/318C279B-242E-4A44-A335-8E3B0DB3A95F/header.php",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/5CB1D4E1-91B3-46AD-82D3-9A489A642F74/header.php",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/B75BE715-5B41-49BF-B84D-40E57D1054CA/trade.php",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/C98D3348-6E0A-4996-8AD6-8618CDBC17D7/cache.php",
+		"/Users/zona/projects/javbucks/ferame/src/.htaccess",
+		"/Users/zona/Downloads/DriveDetector/DriveDetector.cs",
+		"/Users/zona/projects/javbucks/javhd/.gitignore",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/6ECD92A7-A082-406C-813A-877FA52433AD/jb_rotator.php",
+		"/Users/zona/projects/javbucks/testtest/test.txt",
+		"/Users/zona/Docs/!!!!!!!.txt",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/E8441044-7EAE-4C0C-B06A-1E8CAB13EBF6/advanced-cache.php",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/9A25EC3B-7826-41E4-9CA9-068A3EC2149C/index.php",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/6213F099-1CD7-461D-954F-5AB6900DE51F/footer.php",
+		"/etc/hosts",
+		"/Users/zona/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/zona/Library/Caches/Cleanup At Startup/Transmit/D457AE6B-AB58-49BC-B902-2E5D563E0EF3/session_store.rb"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"dima",
+			"root",
+			"svn",
+			");\n",
+			"embedSWF",
+			"flashvarsObj",
+			"par.",
+			"param",
+			"par",
+			"flashvars",
+			"fv",
+			"flashvars",
+			"bitrate",
+			"setOp",
+			"_getOptions",
+			"setOptions",
+			"http://cdn.javhd.com/thumbs/",
+			"/thumbs/thumb1/191x138/thumb1.jpg",
+			", ",
+			"WP_CACHE",
+			"&"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\"",
+			"\",",
+			"",
+			"\\n",
+			"&amp;"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "test.erl",
+					"settings":
+					{
+						"buffer_size": 214,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								214,
+								214
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Erlang/Erlang.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
