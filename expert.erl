@@ -1,4 +1,4 @@
--module(test).
+-module(expert).
 -author("Dmitry Zotov").
 
 -define(ENGINE, computer).
