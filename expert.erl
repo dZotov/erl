@@ -11,36 +11,6 @@ stop() ->
 show_kb() ->
   eresye:get_kb(?ENGINE).  
 
-% ask_props() ->
-%   Filter = fun(Prop) -> 
-% 		  case io:get_line("Does this kind of transport have " 
-% 		  	++ atom_to_list(Prop) ++ "? ") of
-% 		    "y"++_ ->
-% 			true;
-% 		    _ ->
-% 			false
-% 		  end
-% 	   end,
-%   lists:filter(Filter, get_props()).
-
-% guess() ->
-%   guess(ask_props()).
-
-% guess(Properties) when is_list(Properties) ->
-%   Fun2 = fun(X) -> if
-% 		    	is_list(X) ->
-% 			  lists:all(fun(Y) -> lists:member(Y, Properties) end, X);
-% 		    	true ->
-% 			  false
-% 		    end
-%  	  end,
-%   TupleList = eresye:query_kb(?ENGINE, {transport, '_', Fun2}),
-
-%   % Explain result
-%   lists:foreach(fun({transport, Name, Props}) -> 
-%     io:format("I assume this might be ~w because it has the following properties: ~w~n", [Name, Props]) end, TupleList).    
-
-
 start() ->
   code:ensure_loaded(eresye),
   eresye:start(computer),
@@ -48,37 +18,62 @@ start() ->
   eresye:assert(?ENGINE,
 	  [
 	  	{props,[
-	  		"Есть ли изображение на экране",
-			"Загружается ли операционная система",
-			"Загружается ли настройка BIOS",
-			"Отображается ли жесткий диск в BIOS",
-			"Подключен ли жесткий диск к материнской плате",
-			"Работают ли устройства ввода-вывода",
+	  		"Есть ли изображение на экране", 
+			"Загружается ли операционная система", 
+			"Работают ли устройства ввода-вывода", 
 			"Работают ли периферийные устройства",
-			"Включены ли системный блок и монитор в электросеть",
-			"Работает ли системный блок",
-			"Подключен ли монитор к системному блоку",
-			"Исправен ли монитор",
-			"Исправна ли видеокарта",
-			"Исправен ли блок питания",
-			"Подключен ли блок питания к материнской плате"
+			"Загружается ли BIOS",
+			"Отображаются ли жесткие диски в BIOS",
+			"Издает ли писк системный блок"
 	  		]
 	  	}, 
-	   {computer, "Компьютер исправен либо проблема неизвестна", ["Есть ли изображение на экране", "Загружается ли операционная система"]}
+	   {computer, "Компьютер исправен либо проблема неизвестна", ["Есть ли изображение на экране", "Загружается ли операционная система", 
+	   															 	"Работают ли устройства ввода-вывода", "Работают ли периферийные устройства"]},
+	   {computer, "Переустановить ОС", ["Есть ли изображение на экране","Загружается ли BIOS","Отображаются ли жесткие диски в BIOS"]},
+	   {computer, "Проверка кодов BIOS",["Есть ли изображение на экране", "Загружается ли BIOS", "Издает ли писк системный блок"]}
 	   ]).
 
-
-% Rules = [
-% 	{"Компьютер исправен либо проблема неизвестна", [1,2,6,7]},
-% 	{"Требуется замена неисправного периферийного устройства", [1,2,7]},
-% 	{"Необходимо заменить неисправное устройство ввода-вывода", [1,2]},
-% 	{"Tребуется переустановка операционной системы", [1,2,3,4]},
-% 	{"Hеобходимо заменить жесткий диск", [1,2,3,4]},
-% 	{"Tребуется переустановка операционной системы", [1,2,3,4]},
-% 	{"Tребуется переустановка операционной системы", [1,2,3,4]},
-% 	{"Tребуется переустановка операционной системы", [1,2,3,4]},
-% 	{"Tребуется переустановка операционной системы", [1,2,3,4]},
-% 	{"Tребуется переустановка операционной системы", [1,2,3,4]},
-	
-% ].
   
+  %% @spec ask_props() -> list(atom())
+%% Returns the list of properties selected by the user from available properties
+ask_props() ->
+  Filter = fun(Prop) -> 
+		  case io:get_line("Does this kind of transport has " 
+		  	++ atom_to_list(Prop) ++ "? ") of
+		    "y"++_ ->
+			true;
+		    _ ->
+			false
+		  end
+	   end,
+  lists:filter(Filter, get_props()).
+
+%% @spec get_props() -> list(atom())
+%% Returns the list of properties that a kind of transport can possess
+get_props() ->
+  {props, Props} = hd(eresye:query_kb(?ENGINE, {props, '_'})),
+  Props.
+
+%% Asks the user for properties which transport possesses
+%% and triggers guessing process
+guess() ->
+  guess(ask_props()).
+  
+%% Tries to find kinds of transport which match best to the given properties
+guess(Properties) when is_list(Properties) ->
+  % Filter out objects which have appropriate Properties
+  % Any item which makes fun(X) return true is included in result
+  %Fun1 = fun(X) -> lists:all(fun(Y) -> lists:member(Y, Properties) end, X) end,
+  Fun2 = fun(X) -> if
+		   	is_list(X) ->
+			  lists:all(fun(Y)-> lists:member(Y, Properties) end, X);
+		    	true ->
+			  false
+		   end
+ 	 end,
+  TupleList = eresye:query_kb(?ENGINE, {transport, '_', Fun2}),
+
+  % Explain result
+  lists:foreach(fun({transport, Name, Props}) -> 
+    io:format("I assume this might be ~w because it has the following properties: ~w~n",
+	      [Name, Props]) end, TupleList).
