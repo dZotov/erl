@@ -11,13 +11,9 @@ stop() ->
 
 
 start() ->
-  % load ERESYE binary module if it hasn't been yet
   code:ensure_loaded(eresye),
-
-  % start ERESYE engine with specified name
   eresye:start_link(?ENGINE),
   
-  % populate knowledge base with some facts
   eresye:assert(?ENGINE,
     [{props, [
         'you see pictures on display',
@@ -33,7 +29,7 @@ start() ->
         'you have wi-fi network',
         'you can\'t access to wi-fi network',
         'unusual OS working',
-        'peregrev processor',
+        'CPU overheating',
         'coolers problem sounds'
     ]}, 
      {?ENGINE, 'Computer is OK or unknown problem', ['you see pictures on display','BIOS is loading','OS is loading']},
@@ -44,17 +40,13 @@ start() ->
      {?ENGINE, 'Change keyboard',['you see pictures on display','computer doesn\'t  accepts keyboard commands']},
      {?ENGINE, 'Reinstall wi-fi drivers/Change wi-fi card', ['you see pictures on display','BIOS is loading','OS is loading', 'you have wi-fi network', 'you can\'t access to wi-fi network']},
      {?ENGINE, 'Check computer for viruses',['you see pictures on display','BIOS is loading','OS is loading','unusual OS working']},
-     {?ENGINE, 'Check computer coolers',['peregrev processor','coolers problem sounds']}
+     {?ENGINE, 'Check computer coolers',['CPU overheating','coolers problem sounds']}
      ]).
 
 
-
-% Show knowledge base contents
 show_kb() ->
   eresye:get_kb(?ENGINE).
     
-%% @spec ask_props() -> list(atom())
-%% Returns the list of properties selected by the user from available properties
 ask_props() ->
   Filter = fun(Prop) -> 
 		  case io:get_line("Do/Does " 
@@ -67,18 +59,13 @@ ask_props() ->
 	   end,
   lists:filter(Filter, get_props()).
 
-%% @spec get_props() -> list(atom())
-%% Returns the list of properties that a kind of transport can possess
 get_props() ->
   {props, Props} = hd(eresye:query_kb(?ENGINE, {props, '_'})),
   Props.
 
-%% Asks the user for properties which transport possesses
-%% and triggers guessing process
 guess() ->
   guess(ask_props()).
   
-%% Tries to find kinds of transport which match best to the given properties
 guess(Properties) when is_list(Properties) ->
   % Filter out objects which have appropriate Properties
   % Any item which makes fun(X) return true is included in result
@@ -90,17 +77,13 @@ guess(Properties) when is_list(Properties) ->
 			  false
 		   end
  	 end,
-  TupleList = eresye:query_kb(?ENGINE, {transport, '_', Fun2}),
+  TupleList = eresye:query_kb(?ENGINE, {?ENGINE, '_', Fun2}),
 
   % Explain result
-  lists:foreach(fun({transport, Name, Props}) -> 
+  lists:foreach(fun({?ENGINE, Name, Props}) -> 
     io:format("I assume this might be ~w because it has the following properties:~n ~w~n",
 	      [Name, Props]) end, TupleList).
 
-
-% Gets input from user until an entered line meets these requirements: 
-% starts with lowercase letter followed by lowercase letters, digits
-% or underscore ('_'), e. g. example_1
 get_name(Prompt) when is_list(Prompt) ->
   Line = io:get_line(Prompt),
   case re:run(Line, "^[a-z]*[a-z,0-9,_]*\n$") of
@@ -144,6 +127,6 @@ add_property() ->
 % 'Chenge energy block',['turn on system block into engine','system block doesn\'t works']
 % 'Reinstall wi-fi drivers/Change wi-fi card', ['you see pictures on display','BIOS is loading','OS is loading', 'you have wi-fi network', 'you can\'t access to wi-fi network']
 % 'Check computer for viruses',['you see pictures on display','BIOS is loading','OS is loading','unusual OS working']
-% 'Check computer coolers',['peregrev processor','coolers problem sounds']
+% 'Check computer coolers',['CPU overheating','coolers problem sounds']
 
 
